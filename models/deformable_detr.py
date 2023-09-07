@@ -126,11 +126,6 @@ class DeformableDETR(nn.Module):
             #---------fuse module
             self.f_attention = FSAS(dim = 256) #频域注意力
             #----Learn FFN
-            # self.LF_FFN = nn.Sequential( LFFFN(dim=1024),
-            #                              LFFFN(dim=1024),
-            #                              LFFFN(dim=1024),
-            #                              LFFFN(dim=1024),
-            #                              )
             self.LF_FFN = LFFFN(dim=256)
             self.grl = GradientReversal()
             self.backbone_D = MLP(hidden_dim, hidden_dim, 1, 3)
@@ -238,7 +233,6 @@ class DeformableDETR(nn.Module):
                 # （2）输入特征图过grl层
                 # （3）过鉴别器得到最终得分 [b,h*w,c] -> [b,h*w,1] ,鉴别器为简单的MLP
                 # （4）torch.cat将多尺度特征拼接[b,h*w,1] -> [b,多层级 h*w,1]
-               # da_output['backbone'] = torch.cat([self.backbone_D(self.grl(src.flatten(2).transpose(1, 2))) for src in srcs], dim=1)
 
                 out_srcs_da = []
                 memory_list = memory.split([H_ * W_ for H_, W_ in spatial_shapes], dim=1)

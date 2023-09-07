@@ -39,9 +39,6 @@ class AdaptiveThreshold():
 
     @torch.no_grad()
     def update(self,scores_result,probs_result):
-        #=====待考虑增添，暂时不使用
-        # if algorithm.distributed and algorithm.world_size > 1:
-        #     result = concat_all_gather(result)
 
 
         #1.计算  time_p
