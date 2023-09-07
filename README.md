@@ -23,7 +23,7 @@ This implementation is bulit upon [Deformable DETR](https://github.com/fundament
 Please refer to the instructions [here](https://github.com/fundamentalvision/Deformable-DETR/#installation). We leave our system information for reference.
 
 * OS: Ubuntu 16.04
-* Python: 3.11
+* Python: 3.10.9
 * CUDA: 11.8
 * PyTorch: 2.0.1
 * torchvision: 0.15.2
