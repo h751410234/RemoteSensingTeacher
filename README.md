@@ -55,7 +55,7 @@ DAOD_dataset = [
 ]
 ```
 
-## Training / Evaluation
+## Training / Evaluation / Inference
 We provide training script on single node as follows.
 - Training with single GPU
 ```
@@ -66,7 +66,7 @@ python main.py --config_file {CONFIG_FILE}
 GPUS_PER_NODE={NUM_GPUS} ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
 ```
 
-We provide evaluation script to evaluate pre-trained model:
+We provide evaluation script to evaluate pre-trained model.
 - Evaluation Model.
 ```
 python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True RESUME {CHECKPOINT_FILE}
@@ -74,6 +74,11 @@ python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True RESUME {CHECKP
 - Evaluation EMA Model.
 ```
 python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True SSOD.RESUME_EMA {CHECKPOINT_FILE}
+```
+
+We provide inference script to visualize detection results. See [inference.py](inference.py) for details
+```
+python inference.py --config_file {CONFIG_FILE} --img_dir {INPUT_IMAGE_DIR} --output_dir {SAVE_RESULT_DIR}
 ```
 
 ## Pre-trained models
