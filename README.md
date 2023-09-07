@@ -66,7 +66,7 @@ python main.py --config_file {CONFIG_FILE}
 GPUS_PER_NODE={NUM_GPUS} ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
 ```
 
-We provide evaluation script to evaluate pre-trained model.
+We provide evaluation script to evaluate pre-trained model. 
 - Evaluation Model.
 ```
 python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True RESUME {CHECKPOINT_FILE}
