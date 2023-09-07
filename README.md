@@ -78,7 +78,8 @@ python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True SSOD.RESUME_EM
 
 
 ## Pre-trained models
-
+We provide specific experimental configurations and trained models to facilitate the reproduction of our results. 
+You can learn the details of Remote Sensing Teacher through the paper, and please cite our papers if the code is useful for your papers. Thank you!
 - **xView to DOTA**: [cfg](./configs/r50_uda_xView2DOTA_b16.yaml), [model]()
 - **UCAS-AOD to CARPK**: [cfg](./configs/r50_uda_UCASAOD2CARPK_b16.yaml), [model]()
 - **CARPK to UCAS-AOD**: [cfg](./configs/r50_uda_CARPK2UCASAOD_b16.yaml), [model]()
