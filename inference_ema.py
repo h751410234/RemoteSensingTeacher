@@ -69,18 +69,21 @@ def main(cfg):
 
     model, criterion, criterion_ssod,postprocessors = build_model(cfg)
     model.to(device)
-    model.eval()
 
     model_without_ddp = model
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print('number of params:', n_parameters)
 
 
+#-------------------2023.03.17-------创建EMAmodel---------------------
+    # EMA
+    ema_model = EMA.ModelEMA(model)
+
 
     #------加载推理模型-----
-    if cfg.RESUME:
-        checkpoint = torch.load(cfg.RESUME, map_location='cpu')
-        model_without_ddp.load_state_dict(checkpoint['model'], strict=True)
+    if cfg.SSOD.RESUME_EMA:
+        checkpoint_ema = torch.load(cfg.SSOD.RESUME_EMA, map_location='cpu')
+        ema_model.ema.load_state_dict(checkpoint_ema['semi_ema_model'], strict=True)
 #---------------------------------------------------------------------
 
 
@@ -91,7 +94,8 @@ def main(cfg):
         T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
   #inference
-    for n,img_name in enumerate(os.listdir(args.img_dir)):
+    for n,img_name in enumerate(os.listdir(args.img_dir)): #取前300个
+
         print('已处理:', n)
         img_p = os.path.join(args.img_dir,img_name)
         im = Image.open(img_p).convert('RGB')
@@ -100,7 +104,7 @@ def main(cfg):
 
         img = img.cuda()
         # propagate through the model
-        outputs = model_without_ddp(img)
+        outputs = ema_model.ema(img)
 
         out_logits, out_bbox = outputs['pred_logits'], outputs['pred_boxes']
 
@@ -151,11 +155,11 @@ def main(cfg):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Deformable DETR Detector')
     parser.add_argument('--config_file', default='', type=str)
+    parser.add_argument("--opts", default=None, nargs=argparse.REMAINDER)
     parser.add_argument("--img_dir", default='', type=str)
     parser.add_argument("--output_dir", default='', type=str)
     parser.add_argument("--label_list", default=['Plane','Storage-tank','Ship'], type=str)
     parser.add_argument("--visual_score", default=0.2, type=float)
-    parser.add_argument("--opts", default=None, nargs=argparse.REMAINDER)
     args = parser.parse_args()
     cfg = setup(args)
     main(cfg)
