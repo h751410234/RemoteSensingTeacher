@@ -55,7 +55,7 @@ SSOD:
   cosine_ema: True
   ema_rate: 0.90
   teacher_loss_weight: 3
-  thoushold_value: 0.33
+  thoushold_value: 0.5
   adaptive_thoushold: True #自适应阈值
   strong_aug: True #使用强增广
   RESUME_EMA:
