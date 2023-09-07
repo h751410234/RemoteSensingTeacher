@@ -77,17 +77,25 @@ python evaluation.py --config_file {CONFIG_FILE} --opts EVAL True SSOD.RESUME_EM
 ```
 
 We provide inference script to visualize detection results. See [inference.py](inference.py) for details
+- Inference Model.
 ```
-python inference.py --config_file {CONFIG_FILE} --img_dir {INPUT_IMAGE_DIR} --output_dir {SAVE_RESULT_DIR}
+python inference.py --config_file {CONFIG_FILE} --img_dir {INPUT_IMAGE_DIR} --output_dir {SAVE_RESULT_DIR} --opts RESUME {CHECKPOINT_FILE}
+```
+- Inference EMA Model.
+```
+python inference_ema.py --config_file {CONFIG_FILE} --img_dir {INPUT_IMAGE_DIR} --output_dir {SAVE_RESULT_DIR} --opts SSOD.RESUME_EMA {CHECKPOINT_FILE}
 ```
 
 ## Pre-trained models
 We provide specific experimental configurations and pre-trained models to facilitate the reproduction of our results. 
 You can learn the details of Remote Sensing Teacher through the paper, and please cite our papers if the code is useful for your papers. Thank you!
-- **xView to DOTA**: [cfg](./configs/r50_uda_xView2DOTA_b16.yaml), [model]()
-- **UCAS-AOD to CARPK**: [cfg](./configs/r50_uda_UCASAOD2CARPK_b16.yaml), [model]()
-- **CARPK to UCAS-AOD**: [cfg](./configs/r50_uda_CARPK2UCASAOD_b16.yaml), [model]()
-- **HRRSD to SSDD**: [cfg](./configs/r50_uda_HRRSD2SSDD_b16.yaml), [model]()
+
+Task| Size | Map50  | Config | Model 
+------------| ------------- | ------------- | -------------| -------------
+**xView to DOTA** | 800 | 63.3 | [cfg](./configs/r50_uda_xView2DOTA_b16.yaml) | [model]()
+**UCAS-AOD to CARPK** | 800 | 76.2 | [cfg](./configs/r50_uda_UCASAOD2CARPK_b16.yaml) | [model]()
+**CARPK to UCAS-AOD** | 800 | 75.6 | [cfg](./configs/r50_uda_CARPK2UCASAOD_b16.yaml) | [model]()
+**HRRSD to SSDD** | 600 | 58.5 | [cfg](./configs/r50_uda_HRRSD2SSDD_b16.yaml) | [model]()
 
 ## Result Visualization 
 
