@@ -14,97 +14,40 @@ def get_paths(root):
     root = Path(root)
 
     return {
-        'cityscapes': {
-            'train_img': root / 'cityscapes/leftImg8bit/train',
-            'train_anno': root / 'cityscapes/annotations/cityscapes_train.json',
-            'val_img': root / 'cityscapes/leftImg8bit/val',
-            'val_anno': root / 'cityscapes/annotations/cityscapes_val.json',
-        },
-        'cityscapes_caronly': {
-            'train_img': root / 'cityscapes/leftImg8bit/train',
-            'train_anno': root / 'cityscapes/annotations/cityscapes_caronly_train.json',
-            'val_img': root / 'cityscapes/leftImg8bit/val',
-            'val_anno': root / 'cityscapes/annotations/cityscapes_caronly_val.json',
-        },
-        'foggy_cityscapes': {
-            'train_img': root / 'cityscapes/leftImg8bit_foggy/train',
-            'train_anno': root / 'cityscapes/annotations/foggy_cityscapes_train.json',
-            'val_img': root / 'cityscapes/leftImg8bit_foggy/val',
-            'val_anno': root / 'cityscapes/annotations/foggy_cityscapes_val.json',
-        },
-        'sim10k': {
-            'train_img': root / 'sim10k/VOC2012/JPEGImages',
-            'train_anno': root / 'sim10k/annotations/sim10k_caronly.json',
-        },
-        'bdd_daytime': {
-            'train_img': root / 'bdd_daytime/train',
-            'train_anno': root / 'bdd_daytime/annotations/bdd_daytime_train.json',
-            'val_img': root / 'bdd_daytime/val',
-            'val_anno': root / 'bdd_daytime/annotations/bdd_daytime_val.json',
-        },
         #---------添加遥感相关-------------------
-        'xView3c': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/xView/crop_800_100_3c/train_images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/xView/crop_800_100_3c/coco_annotations/train_3c.json',
+        'xView': {
+            'train_img': '',
+            'train_anno': '',
+        },
+        'DOTA': {
+            'train_img': '',
+            'train_anno': '',
             'val_img': '',
             'val_anno': '',
         },
-        'DOTA3c': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/DOTA1.0/crop_800_100_3c/train/train_images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/DOTA1.0/crop_800_100_3c/annotations/train_3c.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/DOTA1.0/crop_800_100_3c/val/train_images',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/DOTA1.0/crop_800_100_3c/annotations/val_3c.json',
-        },
-
-        'optical': {
-                      'train_img': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/train/optical/day_img',
-                      'train_anno': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/train/optical/train.json',
-                      'val_img': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/test/optical/day_img',
-                      'val_anno': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/test/optical/test.json',
-                  },
-        'infrared': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/train/infrared/imgr',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/train/infrared/train_r.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/test/infrared/imgr',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/天大无人机数据集_day_night/test/infrared/test_r.json',
-        },
-
         'UCASAOD': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/UCAS-AOD/CAR/train/images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/UCAS-AOD/CAR/annotations/train.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/UCAS-AOD/CAR/val/images',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/UCAS-AOD/CAR/annotations/val.json',
+            'train_img': '',
+            'train_anno': '',
+            'val_img': '',
+            'val_anno': '',
         },
         'CARPK': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/CARPK/coco/train/images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/CARPK/coco/train/train.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/CARPK/coco/test/images',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/CARPK/coco/test/test.json',
-        },
-        'HRRSD': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/HRRSD/imgs',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/HRRSD/train.json',
-
-        },
-        'SSDD': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/SSDD/images/train',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/SSDD/annotations/train.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/SSDD/images/test',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/SSDD/annotations/test.json',
-        },
-        'clear': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/clear/images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/clear/annotations/clear_train.json',
+            'train_img': '',
+            'train_anno': '',
             'val_img': '',
             'val_anno': '',
         },
-        'cloudy': {
-            'train_img': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/cloudy_split/train/images',
-            'train_anno': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/cloudy_split/train/annotations/cloudy_train.json',
-            'val_img': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/cloudy_split/test/images',
-            'val_anno': '/data/jianhonghan/遥感域适应数据集/项目数据集/domain-transfer/cloudy_split/test/annotations/cloudy_test.json',
-        },
 
+        'HRRSD': {
+            'train_img': '',
+            'train_anno': '',
+        },
+        'SSDD': {
+            'train_img': '',
+            'train_anno': '',
+            'val_img': '',
+            'val_anno': '',
+        },
     }
 
 

@@ -33,19 +33,11 @@ def build_dataset(image_set, cfg,strong_aug = False):
         from .coco_panoptic import build as build_coco_panoptic
         return build_coco_panoptic(image_set, cfg)
     DAOD_dataset = [
-        'cityscapes_to_foggy_cityscapes',
-        'sim10k_to_cityscapes_caronly',
-        'cityscapes_to_bdd_daytime',
         #----------遥感场景------------------
-        'xView3c_to_DOTA3c',
-        'xView3c_small_to_DOTA3c_small',
-        'optical_to_infrared',
-        'AOD_to_UVA',
+        'xView_to_DOTA',
         'UCASAOD_to_CARPK',
         'CARPK_to_UCASAOD',
         'HRRSD_to_SSDD',
-        'clear_to_cloudy',
-
     ]
     if cfg.DATASET.DATASET_FILE in DAOD_dataset:
         from .DAOD import build
