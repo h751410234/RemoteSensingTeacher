@@ -90,12 +90,12 @@ python inference_ema.py --config_file {CONFIG_FILE} --img_dir {INPUT_IMAGE_DIR} 
 We provide specific experimental configurations and pre-trained models to facilitate the reproduction of our results. 
 You can learn the details of Remote Sensing Teacher through the paper, and please cite our papers if the code is useful for your papers. Thank you!
 
-Task| Size | Map50  | Config | Model 
+Task| Size (pixel) | Map50  | Config | Model 
 ------------| ------------- | ------------- | -------------| -------------
-**xView to DOTA** | 800 | 63.3 | [cfg](./configs/r50_uda_xView2DOTA_b16.yaml) | [model]()
-**UCAS-AOD to CARPK** | 800 | 76.2 | [cfg](./configs/r50_uda_UCASAOD2CARPK_b16.yaml) | [model]()
-**CARPK to UCAS-AOD** | 800 | 75.6 | [cfg](./configs/r50_uda_CARPK2UCASAOD_b16.yaml) | [model]()
-**HRRSD to SSDD** | 600 | 58.5 | [cfg](./configs/r50_uda_HRRSD2SSDD_b16.yaml) | [model]()
+**xView to DOTA** | 800 | 63.3 | [cfg](./configs/r50_uda_xView2DOTA_b16.yaml) | [model](https://pan.baidu.com/s/1-jg-3vTAo06t7yNM3NU8WQ?pwd=w3x4)
+**UCAS-AOD to CARPK** | 800 | 76.2 | [cfg](./configs/r50_uda_UCASAOD2CARPK_b16.yaml) | [model](https://pan.baidu.com/s/15pdOhVHleLQUMAXiddx9zQ?pwd=gu2z)
+**CARPK to UCAS-AOD** | 800 | 75.6 | [cfg](./configs/r50_uda_CARPK2UCASAOD_b16.yaml) | [model](https://pan.baidu.com/s/11Z9YGkP0E2mTyT8itKzpfQ?pwd=x4si)
+**HRRSD to SSDD** | 600 | 58.5 | [cfg](./configs/r50_uda_HRRSD2SSDD_b16.yaml) | [model](https://pan.baidu.com/s/1e_k-nG26mBZiK0Y9hgk9BA?pwd=mx64)
 
 ## Result Visualization 
 
