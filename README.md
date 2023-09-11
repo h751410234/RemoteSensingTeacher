@@ -3,16 +3,19 @@ By Jianhong Han etc.
 
 This repository contains the implementation accompanying our paper Remote Sensing Teacher: Cross-Domain Detection Transformer with Frequency-Enhanced Feature Alignment in Remote Sensing Imagery.
 
+<!--
+#--暂时注释
 If you find it helpful for your research, please consider citing:
 
 ```
 @inproceedings{XXX,
   title     = {Remote Sensing Teacher: Cross-Domain Detection Transformer with Learnable Frequency-Enhanced Feature Alignment in Remote Sensing Imagery},
-  author    = {Jianhong Han etc.},
+  author    = {Jianhong Han, Yupei Wang, Liang Chen},
   booktitle = {XXX},
   year      = {2023},
 }
 ```
+-->
 
 ![](/figs/overview.png)
 
