@@ -65,7 +65,7 @@ python main.py --config_file {CONFIG_FILE}
 ```
 - Training with Multi-GPU
 ```
-GPUS_PER_NODE={NUM_GPUS} ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
+CUDA_VISIBLE_DEVICES=gpu_ids ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
 ```
 
 We provide evaluation script to evaluate pre-trained model. 
