@@ -1,5 +1,7 @@
 # Remote Sensing Teacher: Cross-Domain Detection Transformer with Learnable Frequency-Enhanced Feature Alignment in Remote Sensing Imagery
 
+By Jianhong Han, Wenjie Yang, Yupei Wang, and Liang Chen.
+
 This repository contains the implementation accompanying our paper Remote Sensing Teacher: Cross-Domain Detection Transformer with Frequency-Enhanced Feature Alignment in Remote Sensing Imagery.
 
 <!--
@@ -65,7 +67,7 @@ python main.py --config_file {CONFIG_FILE}
 ```
 - Training with Multi-GPU
 ```
-CUDA_VISIBLE_DEVICES=gpu_ids ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
+GPUS_PER_NODE={NUM_GPUS} ./tools/run_dist_launch.sh {NUM_GPUS} python main.py --config_file {CONFIG_FILE}
 ```
 
 We provide evaluation script to evaluate pre-trained model. 
