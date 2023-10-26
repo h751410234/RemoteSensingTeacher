@@ -482,7 +482,7 @@ class SetCriterion(nn.Module):
             losses.update(self.get_loss(loss, outputs, targets, indices, num_boxes, **kwargs))
 
         # In case of auxiliary losses, we repeat this process with the output of each intermediate layer.
-        if 'aux_outputs' or 'aux_outputs_unlabel' in outputs:
+        if 'aux_outputs' in outputs or 'aux_outputs_unlabel' in outputs:
             if ssod_flag: #计算半监督损失
                 key_aux = 'aux_outputs_unlabel'
             else:
@@ -501,7 +501,7 @@ class SetCriterion(nn.Module):
                     l_dict = {k + f'_{i}': v for k, v in l_dict.items()}
                     losses.update(l_dict)
 
-        if 'enc_outputs' or 'enc_outputs_unlabel' in outputs:
+        if 'enc_outputs' in outputs or 'enc_outputs_unlabel' in outputs:
             if ssod_flag:  # 计算半监督损失
                 key_enc = 'enc_outputs_unlabel'
             else:
