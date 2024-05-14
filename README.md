@@ -4,19 +4,18 @@ By Jianhong Han, Wenjie Yang, Yupei Wang, Liang Chen and Zhaoyi Luo.
 
 This repository contains the implementation accompanying our paper Remote Sensing Teacher: Cross-Domain Detection Transformer with Frequency-Enhanced Feature Alignment in Remote Sensing Imagery.
 
-<!--
-#--暂时注释
-If you find it helpful for your research, please consider citing:
-
 ```
-@inproceedings{XXX,
-  title     = {Remote Sensing Teacher: Cross-Domain Detection Transformer with Learnable Frequency-Enhanced Feature Alignment in Remote Sensing Imagery},
-  author    = {Jianhong Han, Yupei Wang, Liang Chen},
-  booktitle = {XXX},
-  year      = {2023},
-}
+@ARTICLE{10474037,
+  author={Han, Jianhong and Yang, Wenjie and Wang, Yupei and Chen, Liang and Luo, Zhaoyi},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Remote Sensing Teacher: Cross-Domain Detection Transformer With Learnable Frequency-Enhanced Feature Alignment in Remote Sensing Imagery}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-14},
+  keywords={Remote sensing;Feature extraction;Detectors;Object detection;Transformers;Adaptation models;Training;Object detection;remote sensing imagery;unsupervised domain adaptation (UDA)},
+  doi={10.1109/TGRS.2024.3378284}}
 ```
--->
 
 ![](/figs/overview.png)
 
