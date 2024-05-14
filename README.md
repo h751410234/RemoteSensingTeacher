@@ -4,6 +4,8 @@ By Jianhong Han, Wenjie Yang, Yupei Wang, Liang Chen and Zhaoyi Luo.
 
 This repository contains the implementation accompanying our paper Remote Sensing Teacher: Cross-Domain Detection Transformer with Frequency-Enhanced Feature Alignment in Remote Sensing Imagery.
 
+If you find it helpful for your research, please consider citing:
+
 ```
 @ARTICLE{10474037,
   author={Han, Jianhong and Yang, Wenjie and Wang, Yupei and Chen, Liang and Luo, Zhaoyi},
