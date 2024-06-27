@@ -13,7 +13,7 @@ If you find it helpful for your research, please consider citing:
   title={Remote Sensing Teacher: Cross-Domain Detection Transformer With Learnable Frequency-Enhanced Feature Alignment in Remote Sensing Imagery}, 
   year={2024},
   volume={62},
-  number={},
+  number={5619814},
   pages={1-14},
   keywords={Remote sensing;Feature extraction;Detectors;Object detection;Transformers;Adaptation models;Training;Object detection;remote sensing imagery;unsupervised domain adaptation (UDA)},
   doi={10.1109/TGRS.2024.3378284}}
@@ -36,7 +36,8 @@ Please refer to the instructions [here](https://github.com/fundamentalvision/Def
 ## Dataset Preparation
 Please construct the datasets following these steps:
 
-- Download the datasets from their sources.
+- Download the datasets from their sources. 
+You can download the processed xView and DOTA1.0 datasets from this Baidu Netdisk [link](https://pan.baidu.com/s/1npJwmLD9lpf54R4OkH8bkw?pwd=41d0 ).
 
 - Convert the annotation files into COCO-format annotations.
 
