@@ -37,7 +37,7 @@ Please refer to the instructions [here](https://github.com/fundamentalvision/Def
 Please construct the datasets following these steps:
 
 - Download the datasets from their sources. 
-You can download the processed xView and DOTA1.0 datasets from this Baidu Netdisk [link](链接：https://pan.baidu.com/s/1G37LVIZVjt5UBBBV7LsjWw?pwd=6el9).
+You can download the processed xView and DOTA1.0 datasets from this Baidu Netdisk [link](https://pan.baidu.com/s/1G37LVIZVjt5UBBBV7LsjWw?pwd=6el9).
 
 - Convert the annotation files into COCO-format annotations.
 
